@@ -14,7 +14,7 @@
 
 3. Database creation
 
-- At the main page(home), click the 'Show total schedules' link
+- At the main page(home), click the 'Show total schedules' link bottom of the page
   ![Show total schedules](https://user-images.githubusercontent.com/87465029/156634924-9e08bec8-984a-4726-9099-edb2af8fd581.png)
 - In the 'Import total schedules' section, click the 'Choose File' button
   ![Import total schedules](https://user-images.githubusercontent.com/87465029/156635088-837d48f7-9d9b-4115-b507-fcd0bf1ce11e.png)
