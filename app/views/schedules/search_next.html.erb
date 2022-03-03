@@ -1,0 +1,9 @@
+<% @sheet.each_with_index do |schedules, index| %>
+  <% if schedules.id == @next_id %>
+    <% if schedules.active == 1 %>
+      <span style="color: green; font-weight: 600">Available</span><br>
+    <% elsif schedules.active == 2%>
+      <span style="color: gray; font-weight: 600">Unavailable</span><br>
+    <% end %>
+  <% end %>
+<% end %>

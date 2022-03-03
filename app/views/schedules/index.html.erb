@@ -1,0 +1,43 @@
+<p id="notice" style="color: green"><%= notice %></p>
+
+<h1>Schedules</h1>
+
+<%= link_to 'New Schedules', new_schedule_path %>
+<a href='/home'> Back to home </a>
+<br><br>
+
+<%= week_calendar events: @schedules do |date, schedules| %>
+  <div style="font-weight: 700">
+  <%= date %>
+  </div>
+  <hr>
+  <% schedules.each do |schedules| %>
+    <div>
+      <%= schedules.tutor_id %> / 
+      <%= schedules.start_time.hour %>:<% if schedules.start_time.min == 0 %>00
+      <% else %><%= schedules.start_time.min %>
+      <% end %> / 
+      <span style="font-weight: 600">
+      <% if schedules.active == 1 %>
+      Available
+      <% else %>
+      Unavailable
+      <% end %>
+      </span>
+      <%= link_to "Show", schedules %><%= button_to "Delete", schedules, method: :delete %>
+    </div>
+  <% end %>
+  
+<% end %>
+<br>
+
+<h3>Import total schedules</h3>
+<%= form_tag import_schedules_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Schedules" %>
+<% end %>
+
+<br>
+<h3>Destroy total schedules</h3>
+<a href='/total_destroy'> Delete all </a>
+<br>

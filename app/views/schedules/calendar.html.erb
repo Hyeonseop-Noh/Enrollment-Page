@@ -1,0 +1,47 @@
+<p id="notice" style="color: green"><%= notice %></p>
+
+<h1>Schedules</h1>
+
+<a href='/home'> Back to home </a><br>
+<br>
+
+<%= week_calendar events: @schedules do |date, schedules| %>
+  <div style="font-weight: 700">
+  Date
+  <%= date %>
+  </div>
+  <hr>
+
+  <% if @time == "20" %>
+    <% schedules.each do |schedules| %>
+      <div>
+        <%= schedules.tutor_id %>
+        <%= schedules.start_time.hour %>:<% if schedules.start_time.min == 0 %>00
+        <% else %><%= schedules.start_time.min %>
+        <% end %>
+        <% if schedules.active == 1 %>
+        <span style="color: green; font-weight: 600">Available</span><br>
+        <% else %>
+        <span style="color: gray; font-weight: 600">Unavailable</span><br>
+        <% end %>
+      </div>
+    <% end %>
+  
+  <% elsif @time == "40" %>
+    <% schedules.each do |schedules| %>
+      <div>
+        <%= schedules.tutor_id %>
+        <%= schedules.start_time.hour %>:<% if schedules.start_time.min == 0 %>00
+        <% else %><%= schedules.start_time.min %>
+        <% end %>
+        <% if schedules.active == 1 %>
+          <%= render :template => "schedules/search_next", :locals => {:@next_id => schedules.id + 1, :@sheet => @schedules} %>
+        <% elsif schedules.active == 2 %>
+          <span style="color: gray; font-weight: 600">Unavailable</span><br>
+        <% end %>          
+      </div>
+    <% end %>
+  
+  <% end %>
+
+<% end %>

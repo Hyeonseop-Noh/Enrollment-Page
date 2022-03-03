@@ -1,0 +1,28 @@
+<p id="notice" style="color: green"><%= notice %></p>
+
+<h1>Schedules</h1>
+<%= link_to 'New Schedules', new_schedule_path %>
+<a href='/home'> Back to home </a>
+<br><br>
+
+<%= week_calendar events: @schedules do |date, schedules| %>
+  <div style="font-weight: 700">
+  Date
+  <%= date %>
+  </div>
+  <hr>
+  <% schedules.each do |schedules| %>
+    <div>
+      <%= schedules.tutor_id %>
+      <%= schedules.start_time.hour %>:<% if schedules.start_time.min == 0 %>00
+      <% else %><%= schedules.start_time.min %>
+      <% end %>
+      <% if schedules.active == 1 %>
+      Available
+      <% else %>
+      Unavailable
+      <% end %>
+      <%= link_to 'Show', schedules %>
+    </div>
+  <% end %>
+<% end %>

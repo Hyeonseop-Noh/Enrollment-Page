@@ -1,0 +1,17 @@
+<h1>Enrollment Page</h1>
+<p id="notice" style="color: red"><%= notice %></p>
+<hr>
+<h3>Input your class format</h3>
+<form action="/calendar" method="get">
+  Find your tutor (id): <input type="string" name="tutor_id" placeholder="1 ~ 5"/><br>
+  Set the time (min): <input type="string" name="time" placeholder="20 or 40"/><br>
+  <input type="submit"/>
+</form>
+<br>
+<h3>For tutors</h3>
+<form action="/tutor_schedules" method="get">
+  Type your tutor id: <input type="string" name="tutor_id" placeholder="1 ~ 5"/><br>
+  <input type="submit"/>
+</form>
+<br>
+<a href="/index">Show total schedules</a>
