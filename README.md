@@ -1,14 +1,16 @@
 # README
 
 1. add simple-calendar by bundle
-   '''
+
+   ```
    $ bundle install
-   '''
+   ```
 
 2. run rails server
-   '''
+
+   ```
    $ rails s
-   '''
+   ```
 
 3. Database creation
 
