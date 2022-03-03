@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. add simple-calendar by bundle
+   '''
+   $ bundle install
+   '''
 
-Things you may want to cover:
+2. run rails server
+   '''
+   $ rails s
+   '''
 
-* Ruby version
+3. Database creation
 
-* System dependencies
+   > at the main page(home), click the 'Show total schedules' link
+   > in the 'Import total schedules' section, click the 'Choose File' button
+   > select 'schedule_file.csv' file in the directory and click the 'Upload Schedules'
+   > done
 
-* Configuration
+4. Datasets
 
-* Database creation
+   > parameters: tutor_id(integer), start_time(datetime), active(integer, 1:available / 2:unavailable)
+   > tutor_id is from 1 to 5 (so, whole 5 tutors)
+   > start_time is from 00:00 to 23:30 (48 times of class in one day)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5. How to run
+   > 'Input your class format' section is for students, which can choose open-class
+   > 'For tutors' section is for tutors, which can change their class schedules or delete them
+   > You can check the whole tutors' schedule in the 'Show total schedules' link
