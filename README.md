@@ -1,12 +1,12 @@
 # README
 
-1. add simple-calendar by bundle
+1. Add simple-calendar by bundle
 
    ```
    $ bundle install
    ```
 
-2. run rails server
+2. Run rails server
 
    ```
    $ rails s
@@ -14,21 +14,21 @@
 
 3. Database creation
 
-- at the main page(home), click the 'Show total schedules' link
+- At the main page(home), click the 'Show total schedules' link
 
-- in the 'Import total schedules' section, click the 'Choose File' button
+- In the 'Import total schedules' section, click the 'Choose File' button
 
-- select 'schedule_file.csv' file in the directory and click the 'Upload Schedules'
+- Select 'schedule_file.csv' file in the directory and click the 'Upload Schedules'
 
-- done
+- Done
 
 4. Datasets
 
-- parameters: tutor_id(integer), start_time(datetime), active(integer, 1:available / 2:unavailable)
+- Parameters: tutor_id(integer), start_time(datetime), active(integer, 1:available / 2:unavailable)
 
-- tutor_id is from 1 to 5 (so, whole 5 tutors)
+- 'tutor_id' is from 1 to 5 (so, whole 5 tutors)
 
-- start_time is from 00:00 to 23:30 (48 times of class in one day)
+- 'start_time' is from 00:00 to 23:30 (48 times of class in one day)
 
 5. How to run
 
