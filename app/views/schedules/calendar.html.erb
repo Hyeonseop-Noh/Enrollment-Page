@@ -38,7 +38,7 @@
           <%= render :template => "schedules/search_next", :locals => {:@next_id => schedules.id + 1, :@sheet => @schedules} %>
         <% elsif schedules.active == 2 %>
           <span style="color: gray; font-weight: 600">Unavailable</span><br>
-        <% end %>          
+        <% end %>
       </div>
     <% end %>
   
