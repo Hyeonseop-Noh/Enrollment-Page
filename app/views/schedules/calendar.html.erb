@@ -35,13 +35,12 @@
         <% else %><%= schedules.start_time.min %>
         <% end %>
         <% if schedules.active == 1 %>
-          <%= render :template => "schedules/search_next", :locals => {:@next_id => schedules.id + 1, :@sheet => @schedules} %>
+          <%= render :template => "schedules/search_next", :locals => {:@next_time => schedules.start_time + 30*60, :@sheet => @schedules} %>
         <% elsif schedules.active == 2 %>
           <span style="color: gray; font-weight: 600">Unavailable</span><br>
         <% end %>
       </div>
     <% end %>
-  
   <% end %>
 
 <% end %>

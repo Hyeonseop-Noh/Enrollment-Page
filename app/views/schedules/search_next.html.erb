@@ -1,5 +1,5 @@
 <% @sheet.each_with_index do |schedules, index| %>
-  <% if schedules.id == @next_id %>
+  <% if schedules.start_time == @next_time %>
     <% if schedules.active == 1 %>
       <span style="color: green; font-weight: 600">Available</span><br>
     <% elsif schedules.active == 2%>
