@@ -15,9 +15,9 @@
 3. Database creation
 
 - At the main page(home), click the 'Show total schedules' link
-  !(https://user-images.githubusercontent.com/87465029/156634924-9e08bec8-984a-4726-9099-edb2af8fd581.png)
+  ![Show total schedules](https://user-images.githubusercontent.com/87465029/156634924-9e08bec8-984a-4726-9099-edb2af8fd581.png)
 - In the 'Import total schedules' section, click the 'Choose File' button
-  !(https://user-images.githubusercontent.com/87465029/156635088-837d48f7-9d9b-4115-b507-fcd0bf1ce11e.png)
+  ![Import total schedules](https://user-images.githubusercontent.com/87465029/156635088-837d48f7-9d9b-4115-b507-fcd0bf1ce11e.png)
 - Select 'schedule_file.csv' file in the directory and click the 'Upload Schedules'
 - Done
 
@@ -30,7 +30,7 @@
 5. How to run
 
 - 'Input your class format' section is for students, which can choose open-class
-  !(https://user-images.githubusercontent.com/87465029/156635195-06c4cb91-c7f8-4c6d-9410-b8c9a7cf2359.png)
+  ![Imput your class format](https://user-images.githubusercontent.com/87465029/156635195-06c4cb91-c7f8-4c6d-9410-b8c9a7cf2359.png)
 - 'For tutors' section is for tutors, which can change their class schedules or delete them
-  !(https://user-images.githubusercontent.com/87465029/156635281-2951306e-1fe5-4c3e-9e91-83428e6e75c8.png)
+  ![For tutors](https://user-images.githubusercontent.com/87465029/156635281-2951306e-1fe5-4c3e-9e91-83428e6e75c8.png)
 - You can check the whole tutors' schedule in the 'Show total schedules' link
