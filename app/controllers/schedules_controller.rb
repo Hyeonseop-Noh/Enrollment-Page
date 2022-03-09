@@ -1,10 +1,11 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: %i[ show edit update destroy ]
 
-  # GET /schedules or /schedules.json
+  # Main Page
   def home
   end
 
+  # Enrollment Page (by tutor_id, running time)
   def calendar
     @id = params[:tutor_id]
     @time = params[:time]
@@ -16,11 +17,13 @@ class SchedulesController < ApplicationController
     end
   end
 
+  # Each tutor's calendar
   def tutor_schedules
     @id = params[:tutor_id]
     @schedules = Schedule.where(tutor_id: @id)
   end
-
+  
+  # GET /schedules or /schedules.json
   def index
     @schedules = Schedule.all
   end
@@ -85,6 +88,7 @@ class SchedulesController < ApplicationController
     redirect_to '/index'
   end
 
+  # IMPORT csv file
   def import
     Schedule.import(params[:file])
     redirect_to schedules_path, notice: "Schedules Added Successfully"
